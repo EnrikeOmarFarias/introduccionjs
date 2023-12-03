@@ -1,3 +1,21 @@
+// Arrow funtions
+
+let sumar = function (n1, n2) {
+  console.log(n1 + n2);
+};
+
+sumar(2, 2);
+
+var sumar2 = (n1, n2) => console.log(n1 + n2);
+
+sumar2(2, 2);
+
+var aprendiendo = (tecnologia) => console.log(`Aprendiendo ${tecnologia}`);
+
+aprendiendo("js");
+
+// Aplicado a ejemplos
+
 // Arrays
 
 let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo"];
@@ -20,14 +38,19 @@ meses.forEach(function (mes) {
   }
 });
 
+meses.forEach((mes) => {
+  if ("mes = marzo") {
+    console.log("Marzo si Existe");
+  }
+});
+
 // Some ideal para arreglo de objetos
 
 resultado = carrito.some(function (producto) {
   return producto.nombre === "Celular Pro";
 });
 
-// Includes
-let resultado = meses.includes("Marzo");
+resultado = carrito.some((producto) => producto.nombre === "Celular Pro");
 console.log(resultado);
 
 // Reduce
@@ -35,3 +58,9 @@ console.log(resultado);
 resultado = carrito.reduce(function (total, producto) {
   return total + producto.precio;
 }, 0);
+
+resultado = carrito.reduce((total, producto) => {
+  total + producto.precio, 0;
+});
+
+console.log(resultado);
