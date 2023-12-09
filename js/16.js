@@ -14,6 +14,17 @@ class Producto {
 const productoDos = new Producto("Monitor", 1500);
 const productoTres = new Producto("Tablet", 1000);
 
-console.log(productoDos);
+// Herencia
+
+class Libro extends Producto {
+  constructor(nombre, precio, isbn) {
+    super(nombre, precio);
+    this.isbn = isbn;
+  }
+}
+
+const Libro = new Libro("JavaScrip la revolucion", 3000, "2154641156315113");
+console.log(Libro.formatearProducto());
+
+console.log(Libro.formatearProducto);
 console.log(productoTres);
-console.log(formatearProducto);
